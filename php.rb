@@ -3,7 +3,7 @@ dep 'php development' do
 end
 
 dep 'oracle instant' do
-  met? { shell('/opt/oracle/instantclient/sdk/ott').include?('jdk1.5') }
+  met? { shell('cat /opt/oracle/instantclient/sdk/ott').include?('jdk1.5') }
 end
 
 dep 'php oci8' do
