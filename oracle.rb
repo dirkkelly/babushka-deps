@@ -1,9 +1,10 @@
 dep "oracle instant client" do
   met? {
-    Dir.exists? "/opt/oracle/instantclient"
-    File.exists? "/opt/oracle/instantclient/sdk/BASIC_README"
-    shell("cat /opt/oracle/instantclient/sdk/BASIC_README").include?("32-bit")
-    shell("cat /opt/oracle/instantclient/sdk/BASIC_README").include?("11.2.0.2.0")
+    Dir.exists?  "/opt/oracle/instantclient"
+    if File.exists? "/opt/oracle/instantclient/sdk/BASIC_README"
+      shell("cat /opt/oracle/instantclient/sdk/BASIC_README").include?("32-bit")
+      shell("cat /opt/oracle/instantclient/sdk/BASIC_README").include?("11.2.0.2.0")
+    end
   }
   meet {
     shell "mkdir ~/tmp"
