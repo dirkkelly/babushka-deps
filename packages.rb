@@ -12,10 +12,10 @@ dep 'build.managed' do
   provides []
 end
 dep 'libaio.managed' do
-  installs { via :apt 'libaio-dev', 'libaio1' }
+  installs { via :apt, 'libaio-dev', 'libaio1' }
   provides []
 end
 dep 'phpdev.managed' do
-  installs { via :apt 'php5-dev' }
+  installs { via :apt, 'php5-dev' }
   provides []
 end
