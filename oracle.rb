@@ -15,7 +15,7 @@ dep "oracle instant client" do
     shell "rm ~/tmp/instantclient_11_2-x86.tar"
     sudo  "mkdir -p /opt/oracle/x86/"
     sudo  "rm /opt/oracle/instantclient"
-    sudo  "rm /opt/oracle/instantclient/x86/instantclient_11_2"
+    sudo  "rm /opt/oracle/x86/instantclient_11_2"
     sudo  "mv instantclient_11_2 /opt/oracle/x86/"
     sudo  "ln -s /opt/oracle/x86/instantclient_11_2 /opt/oracle/instantclient"
     shell %{echo "export ORACLE_BASE='/opt/oracle/instantclient'" ~/.bashrc}
