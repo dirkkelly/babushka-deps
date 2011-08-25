@@ -18,9 +18,9 @@ dep "oracle instant client" do
     sudo  "rm -rf /opt/oracle/x86/instantclient_11_2"
     sudo  "mv instantclient_11_2 /opt/oracle/x86/"
     sudo  "ln -s /opt/oracle/x86/instantclient_11_2 /opt/oracle/instantclient"
-    shell %{echo "export ORACLE_BASE='/opt/oracle/instantclient'" ~/.bashrc}
-    shell %{echo "export ORACLE_HOME=$ORACLE_BASE" ~/.bashrc}
-    shell %{echo "export LD_LIBRARY_PATH=$ORACLE_BASE" ~/.bashrc}
-    shell %{echo "export TNS_ADMIN=$ORACLE_BASE" ~/.bashrc}
+    shell "echo \"export ORACLE_BASE='/opt/oracle/instantclient'\" >> ~/.bashrc"
+    shell "echo \"export ORACLE_HOME=$ORACLE_BASE\" >> ~/.bashrc"
+    shell "echo \"export LD_LIBRARY_PATH=$ORACLE_BASE\" >> ~/.bashrc"
+    shell "echo \"export TNS_ADMIN=$ORACLE_BASE\" >> ~/.bashrc"
   }
 end
