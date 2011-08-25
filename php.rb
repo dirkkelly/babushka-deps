@@ -4,5 +4,5 @@ end
 
 dep 'php oci8' do
   requires 'php development'
-  met? { shell('php-config').include?('oci8') }
+  met? { shell('php -m').include?('oci8') }
 end
