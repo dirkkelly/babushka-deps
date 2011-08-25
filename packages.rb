@@ -7,15 +7,8 @@ dep 'sed.managed' do
     end
   }
 end
-dep 'sshd.managed' do
-  installs { via :apt, 'openssh-server' }
-end
 dep 'build.managed' do
   installs { via :apt, 'build-essential' }
-  provides []
-end
-dep 'libssl.managed' do
-  installs { via :apt, 'libssl-dev' }
   provides []
 end
 dep 'libaio.managed' do
