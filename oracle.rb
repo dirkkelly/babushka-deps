@@ -1,5 +1,8 @@
 dep "oracle instant client" do
-  met? { shell("cat /opt/oracle/instantclient/sdk/ott").include?("jdk1.5") }
+  met? {
+    shell("cat /opt/oracle/instantclient/sdk/BASIC_README").include?("32-bit")
+    shell("cat /opt/oracle/instantclient/sdk/BASIC_README").include?("11.2.0.2.0")
+  }
   meet {
     shell "mkdir ~/tmp"
     shell "cd ~/tmp"
