@@ -9,7 +9,7 @@ dep "oracle instant client" do
   meet {
     shell "mkdir -p ~/tmp"
     shell "cd ~/tmp"
-    shell "wget http://csapc1.murdoch.edu.au/babushka-deps/instantclient_11_2-x86.tar ~/tmp/"
+    shell "curl -o http://csapc1.murdoch.edu.au/babushka-deps/instantclient_11_2-x86.tar > ~/tmp/instantclient_11_2-x86.tar"
     shell "tar -xvf ~/tmp/instantclient_11_2-x86.tar"
     shell "rm ~/tmp/instantclient_11_2x-86.tar"
     sudo  "mkdir -p /opt/oracle/x86/"
