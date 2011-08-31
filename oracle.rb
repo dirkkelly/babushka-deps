@@ -26,12 +26,12 @@ dep "oracle environment settings" do
     shell("cat ~/.bashrc").include?("ORACLE_BASE='/opt/oracle/instantclient'")
     shell("cat ~/.bashrc").include?("ORACLE_HOME='/opt/oracle/instantclient'")
     shell("cat ~/.bashrc").include?("LD_LIBRARY_PATH='/opt/oracle/instantclient'")
-    shell("cat ~/.bashrc").include?("TNS_ADMIN='/opt/oracle/instantclient'")
+    shell("cat ~/.bashrc").include?("TNS_ADMIN='/opt/oracle'")
   }
   meet {
     shell "echo \"export ORACLE_BASE='/opt/oracle/instantclient'\" >> ~/.bashrc"
     shell "echo \"export ORACLE_HOME='$ORACLE_BASE'\" >> ~/.bashrc"
     shell "echo \"export LD_LIBRARY_PATH='$ORACLE_BASE'\" >> ~/.bashrc"
-    shell "echo \"export TNS_ADMIN='$ORACLE_BASE'\" >> ~/.bashrc"
+    shell "echo \"export TNS_ADMIN='/opt/oracle'\" >> ~/.bashrc"
   }
 end
